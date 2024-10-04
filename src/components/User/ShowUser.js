@@ -30,7 +30,7 @@ const ShowUser = () => {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  });
 
   const getUsers = () => {
     axios
@@ -56,6 +56,7 @@ const ShowUser = () => {
               <th>ID</th>
               <th>Name</th>
               <th>Email</th>
+              <th>Sex</th>
               <th>Phone</th>
               <th>Actions</th>
             </tr>
@@ -67,6 +68,7 @@ const ShowUser = () => {
                   <td>{i + 1}</td>
                   <td>{item.name}</td>
                   <td>{item.email}</td>
+                  <td>{item.sex}</td>
                   <td>{item.phone}</td>
                   <td>
                     <Link to={`/edit-user/${item.id}`}>

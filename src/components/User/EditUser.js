@@ -93,6 +93,19 @@ const EditUser = () => {
             onChange={handelInput}
           />
         </div>
+        <div className="mb-3 mt-3">
+          <label for="sex" className="form-label">
+            Sex
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="sex"
+            name="sex"
+            value={user.sex}
+            onChange={handelInput}
+          />
+        </div>
         <div className="mb-3">
           <label for="pwd" className="form-label">
             Phone

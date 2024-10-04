@@ -10,14 +10,15 @@ const CreateUser = () => {
     const [user, setUser] = useState({
         name: "",
         email: "",
-        phone: ""
+        phone: "",
+        sex: ""
     })
 
     const handelInput = (event) => {
         event.preventDefault();
         const { name, value } = event.target;
         console.log(name, value)
-        setUser({ ...user, [name]: value });
+        setUser({ ...user, [name]: value });  
     }
 
     const handelSubmit = async (event) => {
@@ -35,7 +36,7 @@ const CreateUser = () => {
 
             if (response.ok) {
                 console.log('Form submitted successfully!');
-                setUser({name: "",email: "",phone: ""})
+                setUser({name: "",email: "",phone: "",sex: ""})
                 navigate('/show-user');
             } else {
                 console.error('Form submission failed!');
@@ -63,6 +64,10 @@ const CreateUser = () => {
                 <div className="mb-3 mt-3">
                     <label for="email" className="form-label">Email</label>
                     <input type="email" className="form-control" id="email" name="email" value={user.email} onChange={handelInput} />
+                </div>
+                <div className="mb-3 mt-3">
+                    <label for="sex" className="form-label">Sex</label>
+                    <input type="text" className="form-control" id="sex" name="sex" value={user.sex} onChange={handelInput} />
                 </div>
                 <div className="mb-3">
                     <label for="pwd" className="form-label">Phone</label>

@@ -42,6 +42,10 @@ const EditUser = () => {
         <td>{user.email}</td>
       </tr>
       <tr>
+        <td>Sex</td>
+        <td>{user.sex}</td>
+      </tr>
+      <tr>
         <td>Phone</td>
         <td>{user.phone}</td>
       </tr>
