@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../Common/Loader";
 
 const ShowUser = () => {
-  const showUserApi = "http://localhost:3000/user";
+  const showUserApi = "https://66ff38182b9aac9c997e8ef9.mockapi.io/api/oss/users";
 
   const [user, setUser] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
