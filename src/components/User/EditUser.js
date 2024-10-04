@@ -13,7 +13,7 @@ const EditUser = () => {
 
   useEffect(() => {
     getUser();
-  });
+  },[user]);
 
   const getUser = () => {
     axios
